@@ -24,7 +24,7 @@ def falsePosition(f, a, b, TOL, N0):
 # f=lambda x: x**3 + 4*x**2 - 10
 # falsePosition(f, 1, 2, .00001, 25) 
 
-inF = input("Enter the function (in terms of x, e.g., x**3 + 2*x - 1): ")
+inF = input("Enter the function (e.g., x**3 + 2*x - 1): ")
 f=lambda x: eval(inF)
 a=float(input("Enter the lower bound: "))
 b=float(input("Enter the upper bound: "))
