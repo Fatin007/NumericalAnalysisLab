@@ -1,3 +1,4 @@
+# here p0 is the initial guess
 def Iteration(g, p0, Tol, N0):
     i=1
     while(i<=N0):
