@@ -21,5 +21,15 @@ def bisection(f, a, b, TOL, N0):
     print("Method failed after N0 iterations ")
     return None
 
-f=lambda x: x**3 + 4*x**2 - 10
-bisection(f, 1, 2, .00001, 25) 
+# f=lambda x: x**3 + 4*x**2 - 10
+# f=lambda x: x**3 - x - 1
+# f=lambda x: x**2 - 3
+
+inF = input("Enter the function (in terms of x, e.g., x**3 + 4*x**2 - 10): ")
+f=lambda x: eval(inF)
+a=float(input("Enter the lower bound: "))
+b=float(input("Enter the upper bound: "))
+TOL=float(input("Enter the tolerance: "))
+N0=int(input("Enter the number of iterations: "))
+
+# bisection(f, 1, 2, 0.01, 25) bisection(f, a, b, TOL, N0)
