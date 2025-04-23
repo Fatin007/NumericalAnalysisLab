@@ -11,7 +11,7 @@ def falsePosition(f, a, b, TOL, N0):
         print(format(i, '>4d'),' ', format(a, '>12.8f'), ' ', format(p, '>12.8f'), ' ', format(b, '>12.8f'), ' ', format(FP, '>12.8f'))
         if FP == 0 or abs(f(p)) < TOL:
             FP=f(p)
-            return print("Solution is: ", p)
+            return print("Solution is: ", format(p, '>12.8f'))
         i+=1
         if FA*FP > 0:
             a=p
@@ -21,5 +21,14 @@ def falsePosition(f, a, b, TOL, N0):
     print("Method failed after N0 iterations ")
     return None
 
-f=lambda x: x**3 + 4*x**2 - 10
-falsePosition(f, 1, 2, .00001, 25) 
+# f=lambda x: x**3 + 4*x**2 - 10
+# falsePosition(f, 1, 2, .00001, 25) 
+
+inF = input("Enter the function (in terms of x, e.g., x**3 + 2*x - 1): ")
+f=lambda x: eval(inF)
+a=float(input("Enter the lower bound: "))
+b=float(input("Enter the upper bound: "))
+TOL=float(input("Enter the tolerance: "))
+N0=int(input("Enter the number of iterations: "))
+
+falsePosition(f, a, b, TOL, N0)

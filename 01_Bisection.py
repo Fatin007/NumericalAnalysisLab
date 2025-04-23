@@ -32,4 +32,5 @@ b=float(input("Enter the upper bound: "))
 TOL=float(input("Enter the tolerance: "))
 N0=int(input("Enter the number of iterations: "))
 
-# bisection(f, 1, 2, 0.01, 25) bisection(f, a, b, TOL, N0)
+# bisection(f, 1, 2, 0.01, 25) 
+bisection(f, a, b, TOL, N0)
